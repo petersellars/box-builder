@@ -1,3 +1,21 @@
+# Image Builder
+[Packer](https://www.packer.io) build for Ubuntu 16.04 image.
+
+## Packer Docker Image
+To build the image I use the [hashicorp/packer](https://hub.docker.com/r/hashicorp/packer/) Docker image.
+
+### Image Validation
+```
+docker run --rm -v $PWD:/data hashicorp/packer:light validate /data/ubuntu-16.04-amd64.json
+```
+
+### Image Inspection
+```
+docker run --rm -v $PWD:/data hashicorp/packer:light inspect /data/ubuntu-16.04-amd64.json
+```
+---
+# Old README file contents
+
 Box-Build will enable the creation of base boxes for virtual or cloud environments.
 
 NB. Just a concept at this stage - need to flesh this out!
